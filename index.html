@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS Files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="./css/all.min.css">
+
+    <!-- Custom Css Files -->
+    <link rel="stylesheet" href="./css/style.css">    
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="./css/world.png" width="55" height="55" class="d-inline-block align-top" alt="">
+            Weather Base
+        </a>
+    </nav>
+    <!-- Main Area -->
+    <section>
+        <div class="container-fluid" id="app-wrap">
+            <header>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <img src="./css/night.png" alt="night">
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
+                    <button class="button">Enter</button>
+                    <div class="city">Hanoi, VN</div>
+                    <div class="weather">Sunny</div>
+                    <div class="temp">15 °C</div>
+                    <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather" class="icon">
+                    <div class="hi-low">Temp Max:°C / Temp Min°C</div>
+                    <div class="date">Wednesday, April 22 2020</div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <img src="./css/cloudy.png" alt="cloudy">
+                </div>
+            </div>
+            </header>
+    </section>        
+</body>
+<!-- Jquery Javascipt File -->
+<script src="./js/jquery.3.4.1.js"></script>
+<!-- Custom Javascript File -->
+<script src="./js/script.js"></script>
+<!-- Bootstrap Javascript File -->
+<script src="./js/bootstrap.min.js"></script>
+</html>
