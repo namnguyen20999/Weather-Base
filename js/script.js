@@ -33,7 +33,7 @@ function setKey(key){
 
 
 function getResults(cityName) {
-    request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q='+ cityName +'&units=metric&APPID=d99adf2567f4cb6e8af0b5b4af4262ff');
+    request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q='+ cityName +'&units=metric&APPID=d99adf2567f4cb6e8af0b5b4af4262ff');
     request.send();
     request.onload = function(){
         var response = request.response;
@@ -48,7 +48,7 @@ function getResults(cityName) {
         var tempMaxMin = document.querySelector('.hi-low');
         tempMaxMin.innerText = "Temp Max: "+ parsedData.main.temp_max + "°C" + " - " +"Temp Min: "+ parsedData.main.temp_min+ "°C";
         var icon = parsedData.weather[0].icon;
-        var imageURL = 'http://openweathermap.org/img/wn/' + icon + '@2x.png';
+        var imageURL = 'https://openweathermap.org/img/wn/' + icon + '@2x.png';
         var images = document.querySelector('.icon');
         images.setAttribute('src', imageURL);
         
