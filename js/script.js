@@ -33,10 +33,6 @@ function setKey(key){
 
 
 function getResults(cityName) {
-    request.onerror = setError() {
-        console.log("errors");
-    }
-
     request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q='+ cityName +'&units=metric&APPID=d99adf2567f4cb6e8af0b5b4af4262ff');
     request.send();
     request.onload = function(){
