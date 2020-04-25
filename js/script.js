@@ -1,34 +1,24 @@
 var request = new XMLHttpRequest();
 var d = new Date();
-var month = [];
-month[0] = "January";
-month[1] = "February";
-month[2] = "March";
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-month[7] = "August";
-month[8] = "September";
-month[9] = "October";
-month[10] = "November";
-month[11] = "December";
+var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var n = month[d.getMonth()];
 document.querySelector('.date').innerHTML = d.getDate() + ' ' + n +', '+ d.getFullYear();
 
-
-const searchbox = document.querySelector('.search-box');
-searchbox.addEventListener("keypress", setKey);
-function setKey(key){
+let setKey = (key) =>{
     if (key.keyCode == 13){
         getResults(searchbox.value);
-        console.log(searchbox.value);
     }
-}
-
+};
+let searchbox = document.querySelector('.search-box');
+searchbox.addEventListener("keypress", setKey);
+// function setKey(key){
+//     if (key.keyCode == 13){
+//         getResults(searchbox.value);
+//         console.log(searchbox.value);
+//     }
+// }
     document.querySelector('.button').onclick = function showResult() {
         getResults(searchbox.value);
-        console.log(searchbox.value);
     };
 
 
@@ -160,7 +150,6 @@ function getResults(cityName) {
 
 
         //Forecast weather in the next 5 days
-        
         //Day-1
         var day1 = document.querySelector('._5Days1');
         day1.innerText = dataParsed.list[1].dt_txt;
