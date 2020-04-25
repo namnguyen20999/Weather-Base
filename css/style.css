@@ -74,3 +74,17 @@ button {
     font-size: 25px;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 700px) {
+    .block:nth-of-type(1) {
+        order: 3;
+    }
+
+    .block:nth-of-type(2) {
+        order: 1;
+    }
+
+    .block:nth-of-type(3) {
+        order: 2;
+    }
+}
